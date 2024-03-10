@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 
-const mailer = async(email)=>{
+const mailer = async(guest)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -11,9 +11,9 @@ const mailer = async(email)=>{
       
       var mailOptions = {
         from: 'mohit.21ug2013@iiitranchi.ac.in',
-        to: email,
+        to: guest.userEmail,
         subject: 'Booking Confirmation!!!',
-        text: "Dear Guest, We are pleased to confirm your reservation for a hotel room at our establishment for the specified dates. We look forward to hosting you and ensuring your stay is comfortable."
+        text: " Guest, We are pleased to confirm your reservation for a hotel room at our establishment for the specified dates. We look forward to hosting you and ensuring your stay is comfortable."
      };
 
       try {

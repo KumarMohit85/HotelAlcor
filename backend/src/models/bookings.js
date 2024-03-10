@@ -21,17 +21,17 @@ const bookingSchema = new mongoose.Schema({
     },
     bookingStatus : {
         type: String,
-        enum : ['Upcomming', 'Passed'],
+        enum : ['Passed', 'Upcomming'],
         default: 'Upcomming'
     },
+    roomNumber: {
+        type: String,
+        required: true
+    }, 
     roomType: {
         type: String,
         enum: ['A','B','C'],
-        required: true
-    },
-    roomNumber: {
-        type: Number,
-        required: true
+        required : true
     }
 });
 
